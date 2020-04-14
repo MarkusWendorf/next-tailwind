@@ -5,6 +5,7 @@
   "scripts": {
     "start": "next dev",
     "build": "next build",
+    "serve": "next start -p 8080",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'"
   },
   "author": "",
