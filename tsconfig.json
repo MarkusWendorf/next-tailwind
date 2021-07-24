@@ -18,8 +18,7 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "strictPropertyInitialization": false
+    "isolatedModules": true
   },
   "exclude": ["node_modules", ".next"],
   "types": ["typePatches"],
