@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "next dev",
+    "dev": "next dev",
     "build": "next build",
     "serve": "next start -p 8080"
   },
