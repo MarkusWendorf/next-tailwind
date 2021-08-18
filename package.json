@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "next dev",
+    "lint": "next lint",
     "build": "next build",
     "serve": "next start -p 8080"
   },
