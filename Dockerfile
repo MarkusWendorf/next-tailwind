@@ -4,7 +4,7 @@ WORKDIR /nextjs
 
 # Cache dependencies if package.json is unchanged
 COPY package*.json ./
-RUN npm install
+RUN npm ci
 
 # Copy all source files
 COPY . /nextjs/
@@ -16,10 +16,11 @@ FROM node:12-alpine
 
 COPY --from=build /nextjs/package.json package.json
 COPY --from=build /nextjs/package-lock.json package-lock.json
-COPY --from=build /nextjs/.next .next
-COPY --from=build /nextjs/public public
 
 RUN npm install --production
+
+COPY --from=build /nextjs/.next .next
+COPY --from=build /nextjs/public public
 
 EXPOSE 8080
 
