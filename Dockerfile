@@ -1,4 +1,4 @@
-FROM node:12.16.2-alpine3.10 AS build
+FROM node:16-alpine3.14 AS build
 
 WORKDIR /nextjs
 
@@ -12,16 +12,15 @@ COPY . /nextjs/
 # Build application
 RUN npm run build
 
-FROM node:12-alpine
+# Remove devDependencies
+RUN npm prune --production
 
-COPY --from=build /nextjs/package.json package.json
-COPY --from=build /nextjs/package-lock.json package-lock.json
 
-RUN npm install --production
+FROM node:16-alpine3.14
 
-COPY --from=build /nextjs/.next .next
-COPY --from=build /nextjs/public public
+# Copy application to runtime image
+COPY --from=0 /nextjs .
 
 EXPOSE 8080
 
-CMD ["npm", "run", "serve"]
+CMD ["node", "/node_modules/next/dist/bin/next", "start", "-p", "8080"]
