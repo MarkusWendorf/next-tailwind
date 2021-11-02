@@ -11,21 +11,21 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^16.7.4",
-    "@types/react": "^17.0.19",
-    "@types/react-dom": "^17.0.9",
-    "@typescript-eslint/eslint-plugin": "^4.29.3",
-    "autoprefixer": "^10.3.3",
-    "prettier": "^2.3.2",
-    "tailwindcss": "^2.2.8",
-    "typescript": "^4.4.2",
+    "@types/node": "^16.11.6",
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.3.0",
+    "autoprefixer": "^10.4.0",
+    "prettier": "^2.4.1",
+    "tailwindcss": "^2.2.19",
+    "typescript": "^4.4.4",
     "eslint": "^7.32.0",
-    "eslint-config-next": "^11.1.0",
+    "eslint-config-next": "^12.0.2",
     "eslint-config-prettier": "^8.3.0"
   },
   "dependencies": {
     "clsx": "^1.1.1",
-    "next": "^11.1.0",
+    "next": "^12.0.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }
