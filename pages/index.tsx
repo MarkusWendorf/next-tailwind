@@ -6,7 +6,7 @@ const Index = () => {
   return (
     <div>
       <MetaTags title="Startseite" />
-      <p className="text-blue-800 font-semibold bg-gray-300 p-6">Hello Next.js</p>
+      <p className="bg-gray-300 p-6 font-semibold text-blue-800">Hello Next.js</p>
       <SomeComponent />
     </div>
   );
